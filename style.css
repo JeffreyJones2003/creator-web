@@ -1,8 +1,8 @@
 body{
     margin: 0;
     padding: 0;
-    background-color:#F4F4F5;
-    color: #000;
+    background-color:white;
+    color:black;
 }
 nav {
     height: 48px;
@@ -165,9 +165,4 @@ h1{
     text-decoration: underline;
     text-decoration-color: #0087ca;
 }
-
-@media screen and (max-width: 800px) {
-    .left, .main, .right {
-      width: 100%;
-    }
 }
