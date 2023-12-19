@@ -6,15 +6,99 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        header {
+    background-color: #333;
+    padding: 15px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        text-align: center;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+    </style>
 </head>
 <body>
-    <!-- <header><h1><span><center>Media FTS</center></span></h1></header> -->
+    <header>
+        <div class="logo">Your Logo</div>
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="nav">
         <nav>
             
-            <ul>
-                <!--<div class="logo"><a href="home">Logo</a><div></div>-->
-                
+            <ul> 
                 <li class="subnav"><a href="services.html">services</a>
                     <div class="subnav-content ">
                         <a href="services.html#edits" onclick="redirectToTarget()">Editing</a>
@@ -28,13 +112,12 @@
                 <li><a href="#">contact</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Home</a></li>
-                <li class="logo"><center>Logo</center></li>
+                <!-- <li class="logo"><center>Logo</center></li> -->
             </ul></div>
         </nav>
     </div>
     <div class="img">
         <section>
-            <img src="compose.jpg" alt="song composing" >
         </section>
         <div>
             <h1><span class="h1"><center>About Us</center></span></h1>
@@ -45,17 +128,8 @@
         <div >
             <h1><span class="h1"><center>Our services</center></span></h1>
             <div>
-                <div class="box1"><img src="music.jpg">music composing</div>
-                <div class="box2"><img src="photo.jpg">photo</div>
-                <div class="box3"><img src="video.jpg">videography</div>
             </div>
         </div>
-        <!-- <div>
-            <h1><span class="h1">Contact</span></h1>
-            <div>
-                <i class="fa-brands fa-instagram" style="color: #202124;"></i>
-            </div>
-        </div> -->
 
     </div>
     <footer class="footer" id="footer">
